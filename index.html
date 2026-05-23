@@ -266,7 +266,7 @@
     <div class="hidden md:flex items-center gap-1 text-sm">
       <a href="#about" class="nav-link">Giới thiệu</a>
       <a href="#team" class="nav-link">Đội ngũ</a>
-      <a href="#activities" class="nav-link">Hoạt động</a>
+      <a href="#activities" class=" nav-link">Kỉ niệm</a>
       <a href="#timeline" class="nav-link">Lịch trình</a>
       <a href="#location" class="nav-link">Địa điểm</a>
     </div>
@@ -283,7 +283,7 @@
 <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu điều hướng">
   <a href="#about"      class="mobile-nav-link">Giới thiệu</a>
   <a href="#team"       class="mobile-nav-link">Đội ngũ</a>
-  <a href="#activities" class="mobile-nav-link">Hoạt động</a>
+  <a href="#activities" class=" mobile-nav-link">Kỉ niệm</a>
   <a href="#timeline"   class="mobile-nav-link">Lịch trình</a>
   <a href="#location"   class="mobile-nav-link">Địa điểm</a>
   <a href="https://forms.gle/yLFKAMFC3gTVMzDE9" target="_blank" rel="noopener" class="btn-cute mt-4">Tham gia 🎈</a>
@@ -531,17 +531,7 @@
   </div>
 </section>
 
-<!-- ACTIVITIES -->
-<section id="activities" class="py-24 px-6">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center reveal">
-      <span class="chip bg-yellow-100 text-yellow-700">Lịch sinh hoạt tuần</span>
-      <h2 class="display text-4xl md:text-5xl font-extrabold mt-3 heading-deco">Hoạt động hàng tuần</h2>
-      <p class="mt-4 text-purple-900/70">5 chủ đề rực rỡ – mỗi tuần một niềm vui mới 🎉</p>
-    </div>
-    <div id="activityGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-7 mt-14"></div>
-  </div>
-</section>
+
 <!-- TIMELINE -->
 <section id="timeline" class="py-24 px-6">
   <div class="max-w-5xl mx-auto">
@@ -839,28 +829,6 @@
     </div>`;
   });
 
-  // Activities
-  const activities=[
-    {t:'Nhận thưởng',d:'Các em nhỏ vui sướng, phấn khích khi được nhận quà từ các trò chơi.',date:'Thứ Bảy, 06/06/2026',img:'ảnh 1.jpg',c:'#FFE89A',ic:'🪁'},
-    {t:'Trò chơi dân gian',d:'Các em được chơi các trò chơi tuổi thơ, mang đậm bản sắc dân tộc .',date:'Chủ nhật, 14/06/2026',img:'ảnh 2.jpg',c:'#A8DCFF',ic:'🎨'},
-    {t:'Đố vui có thưởng',d:'Thử thách trí tuệ với những câu đố hấp dẫn và phần quà thú vị.',date:'Thứ Bảy, 04/07/2026',img:'ảnh 3.jpg',c:'#FFB8D1',ic:'🧠'},
-    {t:'Hát múa tập thể',d:'Cùng nhau ca hát những bài hát thiếu nhi vui tươi, sôi động.',date:'Chủ nhật, 19/07/2026',img:'ảnh 4.jpg',c:'#FFC79A',ic:'🎤'},
-    {t:'Hoạt động ngoài trời',d:'Đồng đội cùng nhau vượt qua thử thách, gắn kết và rèn luyện sức khoẻ.',date:'Thứ Bảy, 08/08/2026',img:'ảnh 5.jpg',c:'#B8F2D8',ic:'⛺'},
-  ];
-  const aGrid=document.getElementById('activityGrid');
-  activities.forEach(a=>{
-    aGrid.innerHTML+=`
-    <div class="card reveal overflow-hidden">
-      <div class="relative h-56 overflow-hidden">
-        <img src="${a.img}" alt="${a.t}" class="w-full h-full object-cover transition duration-700 hover:scale-110" loading="lazy"/>
-        <div class="absolute top-3 left-3 chip" style="background:${a.c};color:#3B2C5A">${a.ic} ${a.date}</div>
-      </div>
-      <div class="p-6">
-        <h3 class="display text-2xl font-bold">${a.t}</h3>
-        <p class="mt-2 text-purple-900/70">${a.d}</p>
-      </div>
-    </div>`;
-  });
   let memoriesOpen = false;
 function toggleMemories(){
   memoriesOpen = !memoriesOpen;
