@@ -116,6 +116,26 @@
   @media (max-width:640px){
     .btn-cute{padding:14px 28px;font-size:16px;}
   }
+  /* Memory section */
+.memory-item{ position:relative; cursor:zoom-in; }
+.memory-item img{ width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease; }
+.memory-item:hover img{ transform:scale(1.05); }
+.memory-placeholder{
+  width:100%;height:100%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:8px;font-size:13px;font-weight:600;
+  color:rgba(59,44,90,.35);text-align:center;
+  background:linear-gradient(160deg,#FFF7D6,#FFE0EC);
+  min-height:160px;
+}
+.memory-placeholder{ font-size:28px; }
+.memory-placeholder span{ font-size:13px; }
+@media (min-width:640px){
+  #memoryGrid{ grid-template-columns:repeat(3,1fr) !important; }
+}
+@media (min-width:1024px){
+  #memoryGrid{ grid-template-columns:repeat(4,1fr) !important; }
+}
 
   /* ── Hamburger Menu ── */
   #mobile-menu{
@@ -251,7 +271,7 @@
       <a href="#location" class="nav-link">Địa điểm</a>
     </div>
     <div class="flex items-center gap-3">
-      <a href="#about" class="btn-cute !py-2 !px-5 !text-sm hidden md:inline-flex">Tham gia 🎈</a>
+      <a href="https://forms.gle/yLFKAMFC3gTVMzDE9"  target="_blank" rel="noopener" class="btn-cute !py-2 !px-5 !text-sm hidden md:inline-flex">Tham gia 🎈</a>
       <button id="hamburger" aria-label="Mở menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -266,7 +286,7 @@
   <a href="#activities" class="mobile-nav-link">Hoạt động</a>
   <a href="#timeline"   class="mobile-nav-link">Lịch trình</a>
   <a href="#location"   class="mobile-nav-link">Địa điểm</a>
-  <a href="#about" class="btn-cute mt-4">Tham gia 🎈</a>
+  <a href="https://forms.gle/yLFKAMFC3gTVMzDE9" target="_blank" rel="noopener" class="btn-cute mt-4">Tham gia 🎈</a>
 </div>
 
 <!-- HERO -->
@@ -295,7 +315,7 @@
         </h1>
         <p class="mt-2 text-xl md:text-2xl font-bold text-sky-600 display">CHI ĐOÀN KHU PHỐ 76</p>
         <p class="mt-5 text-base md:text-lg text-purple-900/75 leading-relaxed max-w-md">
-          Cùng các bạn nhỏ khám phá một mùa hè đầy ắp tiếng cười với những trò chơi dân gian, hoạt động kỹ năng, sáng tạo và gắn kết yêu thương 💛
+          Cùng các bạn nhỏ khám phá một mùa hè đầy ắp tiếng cười với những trò chơi hấp dẫn, hoạt động kỹ năng, sáng tạo và gắn kết yêu thương 💛
         </p>
         <div class="mt-8 flex flex-col sm:flex-row items-start gap-3">
           <a href="#activities" class="btn-cute">Khám Phá Ngay ✨</a>
@@ -348,16 +368,16 @@
   <div class="max-w-6xl mx-auto">
     <div class="text-center reveal">
       <span class="chip bg-pink-100 text-pink-600">Về chương trình</span>
-      <h2 class="display text-4xl md:text-5xl font-extrabold mt-3 heading-deco">Mùa hè của niềm vui & khám phá</h2>
-      <p class="mt-5 max-w-2xl mx-auto text-lg text-purple-900/70">Chương trình sinh hoạt hè 2026 mang đến không gian vui chơi an toàn, lành mạnh và bổ ích cho thiếu nhi khu phố 76.</p>
+      <h2 class="display text-4xl md:text-5xl font-extrabold mt-3 heading-deco">Mùa hè của niềm vui</h2>
+      <p class="mt-5 max-w-2xl mx-auto text-lg text-purple-900/70">Chương trình sinh hoạt hè 2026 mang đến không gian vui chơi an toàn, lành mạnh và bổ ích cho thiếu nhi khu phố 76, Phường Bình Trị Đông.</p>
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
       <!-- 4 feature cards -->
       <div class="card p-7 reveal" style="background:linear-gradient(160deg,#FFE89A,#FFF7D6)">
-        <div class="text-5xl">🌳</div>
+        <div class="text-5xl">❤️</div>
         <h3 class="display text-xl font-bold mt-4">Môi trường lành mạnh</h3>
-        <p class="mt-2 text-purple-900/70 text-sm">Không gian vui chơi an toàn, gần gũi thiên nhiên và đầy tích cực cho các em.</p>
+        <p class="mt-2 text-purple-900/70 text-sm">Không gian vui chơi an toàn và đầy tích cực cho các em.</p>
       </div>
       <div class="card p-7 reveal" style="background:linear-gradient(160deg,#A8DCFF,#E2F2FF)">
         <div class="text-5xl">🎨</div>
@@ -383,9 +403,131 @@
   <div class="max-w-7xl mx-auto">
     <div class="text-center reveal">
       <span class="chip bg-sky-100 text-sky-600">Đội ngũ tổ chức</span>
-      <h2 class="display text-4xl md:text-5xl font-extrabold mt-3 heading-deco">Những người bạn lớn của các em</h2>
+      <h2 class="display text-4xl md:text-5xl font-extrabold mt-3 heading-deco">Thành viên biệt đội mùa hè</h2>
     </div>
     <div id="teamGrid" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-14"></div>
+  </div>
+</section>
+<!-- MEMORIES -->
+<section id="activities" class="py-24 px-6" style="background:linear-gradient(180deg,#FFF7D6 0%,#FFF0F5 100%)">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center reveal">
+      <span class="chip bg-yellow-100 text-yellow-700">📍 Trạm Dừng Chân</span>
+      <h2 class="display text-4xl md:text-5xl font-extrabold mt-3 heading-deco">Trạm Dừng Chân Ký Ức</h2>
+      <p class="mt-4 text-purple-900/70 max-w-xl mx-auto">Lưu giữ những khoảnh khắc rực rỡ nhất của mùa hè — mỗi tuần một trang ký ức mới 💛</p>
+    </div>
+
+    <div class="flex justify-center mt-10 reveal">
+      <button id="memoryBtn"
+        class="btn-cute flex items-center gap-3 text-lg">
+        <span>📷</span>
+        <span>Những Kỉ Niệm Đáng Nhớ</span>
+        <span id="memoryArrow" style="transition:transform .3s">▼</span>
+      </button>
+    </div>
+
+    <!-- Photo grid — ẩn mặc định -->
+    <div id="memoryGrid" style="
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+      margin-top:32px;
+      max-height:0;
+      overflow:hidden;
+      transition:max-height .7s cubic-bezier(.4,0,.2,1), opacity .5s ease;
+      opacity:0;
+    ">
+
+      <!--
+        👉 HƯỚNG DẪN CẬP NHẬT ẢNH MỖI TUẦN:
+        Thay src="..." bằng tên file ảnh hoặc link ảnh online.
+        Thay alt="..." bằng tên/mô tả kỉ niệm.
+        Có 10 ô ảnh — thêm/bớt tuỳ ý.
+      -->
+
+      <div class="memory-item card overflow-hidden reveal" style="aspect-ratio:1">
+        <img src="ảnh 1.jpg" alt="Kỉ niệm tuần 1"
+      class="lb-trigger"
+      data-lb-src="ảnh 1.jpg"
+      data-lb-caption="Kỉ niệm tuần 1"
+      data-lb-group="memory" />
+        <!-- <img src="tuan1-anh1.jpg" alt="Kỉ niệm tuần 1" /> -->
+      </div>
+      <div class="memory-item card overflow-hidden reveal" style="aspect-ratio:1">
+        <img src="ảnh 2.jpg" alt="Kỉ niệm tuần 1"
+        class="lb-trigger"
+        data-lb-src="ảnh 2.jpg"
+        data-lb-caption="Kỉ niệm tuần 1"
+        data-lb-group="memory" />
+        <!-- <img src="tuan1-anh2.jpg" alt="Kỉ niệm tuần 1" /> -->
+      </div>
+      <div class="memory-item card overflow-hidden reveal" style="aspect-ratio:1">
+        <img src="ảnh 3.jpg" alt="Kỉ niệm tuần 1"
+      class="lb-trigger"
+      data-lb-src="ảnh 3.jpg"
+      data-lb-caption="Kỉ niệm tuần 1"
+      data-lb-group="memory" />
+        <!-- <img src="tuan2-anh1.jpg" alt="Kỉ niệm tuần 2" /> -->
+      </div>
+      <div class="memory-item card overflow-hidden reveal" style="aspect-ratio:1">
+        <img src="ảnh 4.jpg" alt="Kỉ niệm tuần 1"
+      class="lb-trigger"
+      data-lb-src="ảnh 4.jpg"
+      data-lb-caption="Kỉ niệm tuần 1"
+      data-lb-group="memory" />
+        <!-- <img src="tuan2-anh2.jpg" alt="Kỉ niệm tuần 2" /> -->
+      </div>
+      <div class="memory-item card overflow-hidden reveal" style="aspect-ratio:1">
+        <img src="ảnh 5.jpg" alt="Kỉ niệm tuần 1"
+      class="lb-trigger"
+      data-lb-src="ảnh 5.jpg"
+      data-lb-caption="Kỉ niệm tuần 1"
+      data-lb-group="memory" />
+        <!-- <img src="tuan3-anh1.jpg" alt="Kỉ niệm tuần 3" /> -->
+      </div>
+      <div class="memory-item card overflow-hidden reveal" style="aspect-ratio:1">
+        <img src="ảnh 6.jpg" alt="Kỉ niệm tuần 1"
+      class="lb-trigger"
+      data-lb-src="ảnh 6.jpg"
+      data-lb-caption="Kỉ niệm tuần 1"
+      data-lb-group="memory" />
+        <!-- <img src="tuan3-anh2.jpg" alt="Kỉ niệm tuần 3" /> -->
+      </div>
+      <div class="memory-item card overflow-hidden reveal" style="aspect-ratio:1">
+        <img src="ảnh 7.jpg" alt="Kỉ niệm tuần 1"
+      class="lb-trigger"
+      data-lb-src="ảnh 7.jpg"
+      data-lb-caption="Kỉ niệm tuần 1"
+      data-lb-group="memory" />
+        <!-- <img src="tuan4-anh1.jpg" alt="Kỉ niệm tuần 4" /> -->
+      </div>
+      <div class="memory-item card overflow-hidden reveal" style="aspect-ratio:1">
+        <img src="ảnh 8.jpg" alt="Kỉ niệm tuần 1"
+      class="lb-trigger"
+      data-lb-src="ảnh 8.jpg"
+      data-lb-caption="Kỉ niệm tuần 1"
+      data-lb-group="memory" />
+        <!-- <img src="tuan4-anh2.jpg" alt="Kỉ niệm tuần 4" /> -->
+      </div>
+      <div class="memory-item card overflow-hidden reveal" style="aspect-ratio:1">
+        <img src="ảnh 9.jpg" alt="Kỉ niệm tuần 1"
+      class="lb-trigger"
+      data-lb-src="ảnh 9.jpg"
+      data-lb-caption="Kỉ niệm tuần 1"
+      data-lb-group="memory" />
+        <!-- <img src="tuan5-anh1.jpg" alt="Kỉ niệm tuần 5" /> -->
+      </div>
+      <div class="memory-item card overflow-hidden reveal" style="aspect-ratio:1">
+        <img src="ảnh 10.jpg" alt="Kỉ niệm tuần 1"
+      class="lb-trigger"
+      data-lb-src="ảnh 10.jpg"
+      data-lb-caption="Kỉ niệm tuần 1"
+      data-lb-group="memory" />
+        <!-- <img src="tuan5-anh2.jpg" alt="Kỉ niệm tuần 5" /> -->
+      </div>
+
+    </div>
+    <!-- Thêm ảnh vào đây mỗi tuần ↑ -->
   </div>
 </section>
 
@@ -407,42 +549,161 @@
       <span class="chip bg-orange-100 text-orange-600">Hành trình mùa hè</span>
       <h2 class="display text-4xl md:text-5xl font-extrabold mt-3 heading-deco">Lịch trình hè 2026</h2>
     </div>
+
     <div class="relative mt-16">
-      <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-1.5 bg-gradient-to-b from-pink-300 via-yellow-300 to-sky-300 rounded-full md:-translate-x-1/2"></div>
-      <!-- June -->
-      <div class="relative md:grid md:grid-cols-2 md:gap-12 mb-14 reveal">
-        <div class="md:text-right md:pr-10">
-          <div class="card p-6 inline-block" style="background:linear-gradient(160deg,#FFE89A,#FFF7D6)">
-            <span class="chip bg-yellow-300 text-yellow-900">Tháng 6</span>
-            <h3 class="display text-2xl font-bold mt-2">🎉 Khai mạc hè</h3>
-            <p class="mt-2 text-purple-900/70">Lễ khai mạc rộn ràng với văn nghệ, trò chơi và lời chào mùa hè rực rỡ.</p>
+      <!-- Đường dọc giữa -->
+      <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-1.5 bg-gradient-to-b from-yellow-300 via-sky-300 to-pink-300 rounded-full md:-translate-x-1/2"></div>
+
+      <!-- THÁNG 6 -->
+      <div class="relative pl-14 md:pl-0 mb-3 reveal">
+        <div class="absolute left-4 md:left-1/2 top-3 tl-dot md:-translate-x-1/2" style="box-shadow:0 0 0 4px #FFE89A;width:20px;height:20px;"></div>
+        <div class="md:w-1/2 md:pr-10 md:text-right">
+          <span class="chip bg-yellow-300 text-yellow-900 text-base px-5 py-2">☀️ Tháng 6</span>
+        </div>
+      </div>
+      <div class="relative pl-14 md:pl-0 mb-4 reveal">
+        <div class="absolute left-4 md:left-1/2 top-4 tl-dot md:-translate-x-1/2" style="box-shadow:0 0 0 3px #FFE89A"></div>
+        <div class="md:grid md:grid-cols-2 md:gap-12">
+          <div class="md:text-right md:pr-10">
+            <div class="card p-4 inline-block w-full md:w-auto" style="background:linear-gradient(160deg,#FFF7D6,#FFFBEF)">
+              <div class="chip bg-yellow-200 text-yellow-800 mb-1">Tuần 1</div>
+              <div class="font-bold text-purple-900">Bingo & Rung Chuông Vàng</div>
+            </div>
           </div>
         </div>
-        <div class="absolute left-4 md:left-1/2 top-6 tl-dot md:-translate-x-1/2" style="box-shadow:0 0 0 4px #FFE89A"></div>
       </div>
-      <!-- July -->
-      <div class="relative md:grid md:grid-cols-2 md:gap-12 mb-14 reveal">
-        <div></div>
-        <div class="md:pl-10">
-          <div class="card p-6 inline-block" style="background:linear-gradient(160deg,#A8DCFF,#E2F2FF)">
-            <span class="chip bg-sky-300 text-sky-900">Tháng 7</span>
-            <h3 class="display text-2xl font-bold mt-2">💪 Hoạt động kỹ năng</h3>
-            <p class="mt-2 text-purple-900/70">Học kỹ năng sống, sinh tồn, sơ cấp cứu, cùng những trò chơi đồng đội thú vị.</p>
+      <div class="relative pl-14 md:pl-0 mb-4 reveal">
+        <div class="absolute left-4 md:left-1/2 top-4 tl-dot md:-translate-x-1/2" style="box-shadow:0 0 0 3px #FFE89A"></div>
+        <div class="md:grid md:grid-cols-2 md:gap-12">
+          <div></div>
+          <div class="md:pl-10">
+            <div class="card p-4 inline-block w-full md:w-auto" style="background:linear-gradient(160deg,#FFF7D6,#FFFBEF)">
+              <div class="chip bg-yellow-200 text-yellow-800 mb-1">Tuần 2</div>
+              <div class="font-bold text-purple-900">Đấu Trường Sinh Tồn Nhí</div>
+            </div>
           </div>
         </div>
-        <div class="absolute left-4 md:left-1/2 top-6 tl-dot md:-translate-x-1/2" style="box-shadow:0 0 0 4px #A8DCFF"></div>
       </div>
-      <!-- August -->
-      <div class="relative md:grid md:grid-cols-2 md:gap-12 reveal">
-        <div class="md:text-right md:pr-10">
-          <div class="card p-6 inline-block" style="background:linear-gradient(160deg,#FFB8D1,#FFE0EC)">
-            <span class="chip bg-pink-300 text-pink-900">Tháng 8</span>
-            <h3 class="display text-2xl font-bold mt-2">🎊 Bế mạc hè</h3>
-            <p class="mt-2 text-purple-900/70">Tổng kết, trao thưởng và đêm hội chia tay mùa hè đáng nhớ.</p>
+      <div class="relative pl-14 md:pl-0 mb-4 reveal">
+        <div class="absolute left-4 md:left-1/2 top-4 tl-dot md:-translate-x-1/2" style="box-shadow:0 0 0 3px #FFE89A"></div>
+        <div class="md:grid md:grid-cols-2 md:gap-12">
+          <div class="md:text-right md:pr-10">
+            <div class="card p-4 inline-block w-full md:w-auto" style="background:linear-gradient(160deg,#FFF7D6,#FFFBEF)">
+              <div class="chip bg-yellow-200 text-yellow-800 mb-1">Tuần 3</div>
+              <div class="font-bold text-purple-900">Biệt Đội Giải Mã Giao Thông</div>
+            </div>
           </div>
         </div>
-        <div class="absolute left-4 md:left-1/2 top-6 tl-dot md:-translate-x-1/2" style="box-shadow:0 0 0 4px #FFB8D1"></div>
       </div>
+      <div class="relative pl-14 md:pl-0 mb-10 reveal">
+        <div class="absolute left-4 md:left-1/2 top-4 tl-dot md:-translate-x-1/2" style="box-shadow:0 0 0 3px #FFE89A"></div>
+        <div class="md:grid md:grid-cols-2 md:gap-12">
+          <div></div>
+          <div class="md:pl-10">
+            <div class="card p-4 inline-block w-full md:w-auto" style="background:linear-gradient(160deg,#FFF7D6,#FFFBEF)">
+              <div class="chip bg-yellow-200 text-yellow-800 mb-1">Tuần 4</div>
+              <div class="font-bold text-purple-900">Rác Đi Đâu Thế?</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- THÁNG 7 -->
+      <div class="relative pl-14 md:pl-0 mb-3 reveal">
+        <div class="absolute left-4 md:left-1/2 top-3 tl-dot md:-translate-x-1/2" style="box-shadow:0 0 0 4px #A8DCFF;width:20px;height:20px;"></div>
+        <div class="md:w-1/2 md:pl-10 md:ml-auto">
+          <span class="chip bg-sky-300 text-sky-900 text-base px-5 py-2">🌊 Tháng 7</span>
+        </div>
+      </div>
+      <div class="relative pl-14 md:pl-0 mb-4 reveal">
+        <div class="absolute left-4 md:left-1/2 top-4 tl-dot md:-translate-x-1/2" style="box-shadow:0 0 0 3px #A8DCFF"></div>
+        <div class="md:grid md:grid-cols-2 md:gap-12">
+          <div class="md:text-right md:pr-10">
+            <div class="card p-4 inline-block w-full md:w-auto" style="background:linear-gradient(160deg,#E2F2FF,#F0F8FF)">
+              <div class="chip bg-sky-200 text-sky-800 mb-1">Tuần 5</div>
+              <div class="font-bold text-purple-900">Săn Tìm Mật Mã Công Dân Số</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative pl-14 md:pl-0 mb-4 reveal">
+        <div class="absolute left-4 md:left-1/2 top-4 tl-dot md:-translate-x-1/2" style="box-shadow:0 0 0 3px #A8DCFF"></div>
+        <div class="md:grid md:grid-cols-2 md:gap-12">
+          <div></div>
+          <div class="md:pl-10">
+            <div class="card p-4 inline-block w-full md:w-auto" style="background:linear-gradient(160deg,#E2F2FF,#F0F8FF)">
+              <div class="chip bg-sky-200 text-sky-800 mb-1">Tuần 6</div>
+              <div class="font-bold text-purple-900">Mảnh Ghép Thành Phố Bác</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative pl-14 md:pl-0 mb-4 reveal">
+        <div class="absolute left-4 md:left-1/2 top-4 tl-dot md:-translate-x-1/2" style="box-shadow:0 0 0 3px #A8DCFF"></div>
+        <div class="md:grid md:grid-cols-2 md:gap-12">
+          <div class="md:text-right md:pr-10">
+            <div class="card p-4 inline-block w-full md:w-auto" style="background:linear-gradient(160deg,#E2F2FF,#F0F8FF)">
+              <div class="chip bg-sky-200 text-sky-800 mb-1">Tuần 7</div>
+              <div class="font-bold text-purple-900">Siêu Nhí Giữ Màu Cờ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative pl-14 md:pl-0 mb-10 reveal">
+        <div class="absolute left-4 md:left-1/2 top-4 tl-dot md:-translate-x-1/2" style="box-shadow:0 0 0 3px #A8DCFF"></div>
+        <div class="md:grid md:grid-cols-2 md:gap-12">
+          <div></div>
+          <div class="md:pl-10">
+            <div class="card p-4 inline-block w-full md:w-auto" style="background:linear-gradient(160deg,#E2F2FF,#F0F8FF)">
+              <div class="chip bg-sky-200 text-sky-800 mb-1">Tuần 8</div>
+              <div class="font-bold text-purple-900">Kẻ Điều Khiển</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- THÁNG 8 -->
+      <div class="relative pl-14 md:pl-0 mb-3 reveal">
+        <div class="absolute left-4 md:left-1/2 top-3 tl-dot md:-translate-x-1/2" style="box-shadow:0 0 0 4px #FFB8D1;width:20px;height:20px;"></div>
+        <div class="md:w-1/2 md:pr-10 md:text-right">
+          <span class="chip bg-pink-300 text-pink-900 text-base px-5 py-2">🌸 Tháng 8</span>
+        </div>
+      </div>
+      <div class="relative pl-14 md:pl-0 mb-4 reveal">
+        <div class="absolute left-4 md:left-1/2 top-4 tl-dot md:-translate-x-1/2" style="box-shadow:0 0 0 3px #FFB8D1"></div>
+        <div class="md:grid md:grid-cols-2 md:gap-12">
+          <div class="md:text-right md:pr-10">
+            <div class="card p-4 inline-block w-full md:w-auto" style="background:linear-gradient(160deg,#FFE0EC,#FFF0F5)">
+              <div class="chip bg-pink-200 text-pink-800 mb-1">Tuần 9</div>
+              <div class="font-bold text-purple-900">Đấu Trường Ngọn Lửa</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative pl-14 md:pl-0 mb-4 reveal">
+        <div class="absolute left-4 md:left-1/2 top-4 tl-dot md:-translate-x-1/2" style="box-shadow:0 0 0 3px #FFB8D1"></div>
+        <div class="md:grid md:grid-cols-2 md:gap-12">
+          <div></div>
+          <div class="md:pl-10">
+            <div class="card p-4 inline-block w-full md:w-auto" style="background:linear-gradient(160deg,#FFE0EC,#FFF0F5)">
+              <div class="chip bg-pink-200 text-pink-800 mb-1">Tuần 10</div>
+              <div class="font-bold text-purple-900">Thị Trấn Tỷ Phú</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative pl-14 md:pl-0 reveal">
+        <div class="absolute left-4 md:left-1/2 top-4 tl-dot md:-translate-x-1/2" style="box-shadow:0 0 0 3px #FFB8D1"></div>
+        <div class="md:grid md:grid-cols-2 md:gap-12">
+          <div class="md:text-right md:pr-10">
+            <div class="card p-4 inline-block w-full md:w-auto" style="background:linear-gradient(160deg,#FFE0EC,#FFF0F5)">
+              <div class="chip bg-pink-200 text-pink-800 mb-1">Tuần 11</div>
+              <div class="font-bold text-purple-900">Nâng Bước Em Tới Trường</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -452,7 +713,7 @@
   <div class="max-w-6xl mx-auto">
     <div class="text-center reveal">
       <span class="chip bg-sky-100 text-sky-600">Địa điểm tổ chức</span>
-      <h2 class="display text-4xl md:text-5xl font-extrabold mt-3 heading-deco">Hẹn gặp các em tại đây</h2>
+      <h2 class="display text-4xl md:text-5xl font-extrabold mt-3 heading-deco">Ngôi nhà mùa hè</h2>
     </div>
     <div class="grid lg:grid-cols-2 gap-8 mt-14 items-stretch">
       <div class="card p-8 reveal" style="background:linear-gradient(160deg,#FFE89A,#FFF7D6)">
@@ -460,7 +721,7 @@
         <h3 class="display text-2xl font-bold mt-4">Chi đoàn Khu phố 76</h3>
         <div class="mt-5 space-y-4 text-purple-900/80">
           <div><div class="font-bold">Địa chỉ</div><div>530 Tỉnh Lộ 10</div></div>
-          <div><div class="font-bold">Khu vực</div><div>QJ59+249 Bình Trị Đông, Hồ Chí Minh</div></div>
+          <div><div class="font-bold">Khu vực</div><div> Bình Trị Đông, Hồ Chí Minh</div></div>
           <div><div class="font-bold">Toạ độ</div><div>10.7575375, 106.6178536</div></div>
         </div>
         <a href="https://www.google.com/maps?q=10.7575375,106.6178536" target="_blank" rel="noopener" class="btn-cute mt-7">Mở Google Maps 🗺️</a>
@@ -600,6 +861,24 @@
       </div>
     </div>`;
   });
+  let memoriesOpen = false;
+function toggleMemories(){
+  memoriesOpen = !memoriesOpen;
+  const grid  = document.getElementById('memoryGrid');
+  const arrow = document.getElementById('memoryArrow');
+  if(memoriesOpen){
+    grid.style.maxHeight = grid.scrollHeight + 2000 + 'px';
+    grid.style.opacity   = '1';
+    arrow.style.transform = 'rotate(180deg)';
+    setTimeout(()=> grid.scrollIntoView({behavior:'smooth', block:'start'}), 100);
+  } else {
+    grid.style.maxHeight = '0';
+    grid.style.opacity   = '0';
+    arrow.style.transform = 'rotate(0deg)';
+  }
+}
+const memoryBtn = document.getElementById('memoryBtn');
+if(memoryBtn) memoryBtn.addEventListener('click', toggleMemories);
 
   // Reveal on scroll
   const io=new IntersectionObserver(es=>{
